@@ -1,8 +1,7 @@
-1. Sebelum menjalankan CLI Modularity, pastikan mendownload PHP terlebih dahulu
-("sudo apt install php" // "sudo apt-get install php") : DEBIAN
-2. Tempatkan directory "modularity-tealinux" pada dalam directory "Documents/"
-3. Lalu jalankan command "sudo chmod +x Documents/modularity-tealinux/modularitea"
-4. Pindahkan file "modularitea" menuju directory "/usr/local/bin"
-("sudo mv Documents/modularity-tealinux/modularitea /usr/local/bin")
-5. Update & Upgrade ("sudo apt update && sudo apt upgrade")
-6. Dan yang terakhir lakukan command "cd" untuk kembali di $HOME dan jalankan perintah "modularitea"
+1. Tempatkan "modularity-tealinux" pada directory Documents (Mandatory)
+2. Pastikan posisi di directory Home atau bisa dengan jalankan command
+("cd") atau ("cd ~")
+3. Setelah berada pada directory Home, jalankan command
+("./Documents/modularity-tealinux/setup.sh")
+4. Apabila proses setup selesai, anda bisa jalankan command
+("modularitea")
