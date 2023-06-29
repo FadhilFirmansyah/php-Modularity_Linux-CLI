@@ -6,7 +6,7 @@
         public static function info(string $info){
             echo "$info: ";
             $output = fgets(STDIN);
-            return trim($output);
+            return strtolower(trim($output));
         }
     }
 

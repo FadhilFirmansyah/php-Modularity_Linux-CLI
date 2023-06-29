@@ -12,20 +12,6 @@
     use Modularity\SubModul\ModulOfMM;
 
     class Modular{
-
-        private array $arrToolsWebDev = ["Chrome", "Visual Studio Code", "Atom"];
-        private array $arrFEWebDev = ["NodeJS", "NVM", "PNPM", "YARN"];
-        private array $arrBEWebDev = ["Python", "PHP", "Go", "Java", "MariaDB", "PostgreSQL", "Apache", "Nginx"];
-
-        private array $arrToolsMobileDev = ["Android Studio"];
-        private array $arrMobileDev = ["Java", "Flutter", "Dart"];
-        private array $arrEmuMobileDev = ["Bluestack", "Nox"];
-
-        private array $arr3DMultMed = ["Blender"];
-        private array $arrPhotoMultMed = ["Inkscape", "GIMP"];
-        private array $arrVideoMultMed = ["Shotcut", "OpenShot"];
-        private array $arrAudioMultMed = ["Audacity", "Ardour"];
-
         public function main(){
             while(true){
                 echo <<< MENU
@@ -53,70 +39,50 @@
         }
 
         public function web(){
-            echo "Tools" . PHP_EOL;
-            foreach($this->arrToolsWebDev as $tools){
-                echo "  |_ " . $tools . PHP_EOL;
-            }
+            echo <<< FE
 
-            echo PHP_EOL . "Frontend" . PHP_EOL;
-            foreach($this->arrFEWebDev as $fe){
-                echo "  |_ " . $fe . PHP_EOL;
-            }
+            1. Frontend Developer
+                |_ Text Editor: Visual Studio Code
+                |_ Browser: Chrome
+                |_ Package Manager: NodeJS
 
-            echo PHP_EOL . "Backend" . PHP_EOL;
-            foreach($this->arrBEWebDev as $be){
-                echo "  |_ " . $be . PHP_EOL;
-            }
+            FE . PHP_EOL;
 
-            echo PHP_EOL;
+            echo <<< BE
+            2. Backend Developer
+                |_ Text Editor: Visual Studio Code
+                |_ Languages: Python & PHP
+                |_ Databases: MariaDB & PostgreSQL
+                |_ Servers: Apache
+
+            BE . PHP_EOL;
 
             ModulOfWeb::installModul();
         }
 
         public function mobile(){
-            echo "Tools" . PHP_EOL;
-            foreach($this->arrToolsMobileDev as $tools){
-                echo "  |_ " . $tools . PHP_EOL;
-            }
+            echo <<< MOBILE
 
-            echo PHP_EOL . "Language" . PHP_EOL;
-            foreach($this->arrMobileDev as $mobile){
-                echo "  |_ " . $mobile . PHP_EOL;
-            }
+            Mobile Developer
+              |_ Software: Android Studio
+              |_ Languages: Java, Flutter, & Dart
 
-            echo PHP_EOL .  "Emulator" . PHP_EOL;
-            foreach($this->arrEmuMobileDev as $emu){
-                echo "  |_ " . $emu . PHP_EOL;
-            }
-
-            echo PHP_EOL;
+            MOBILE . PHP_EOL;
 
             ModulOfMobile::installModul();
         }
 
         public function mm(){
 
-            echo "3D Modeling" . PHP_EOL;
-            foreach($this->arr3DMultMed as $ddd){
-                echo "  |_ " . $ddd . PHP_EOL;
-            }
+            echo <<< MULTIMEDIA
+            
+            Multimedia
+              |_ 3D Modeling: Blender
+              |_ Photo Editor: Inkscape
+              |_ Video Editor: OpenShot
+              |_ Audio Editor: Audacity
 
-            echo PHP_EOL . "Photo Editing" . PHP_EOL;
-            foreach($this->arrPhotoMultMed as $photo){
-                echo "  |_ " . $photo . PHP_EOL;
-            }
-
-            echo PHP_EOL . "Video Editing" . PHP_EOL;
-            foreach($this->arrVideoMultMed as $video){
-                echo "  |_ " . $video . PHP_EOL;
-            }
-
-            echo PHP_EOL . "Audio Editing" . PHP_EOL;
-            foreach($this->arrAudioMultMed as $audio){
-                echo "  |_ " . $audio . PHP_EOL;
-            }
-
-            echo PHP_EOL;
+            MULTIMEDIA . PHP_EOL;
 
             ModulOfMM::installModul();
         }
